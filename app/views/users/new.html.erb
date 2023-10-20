@@ -1,4 +1,4 @@
-<h1>Users#new</h1>
+<h1>Create User</h1>
 <%= form_with model: @user do |f| %>
   <% if @user.errors.any? %>
     <div>
@@ -27,5 +27,8 @@
   </div>
   <p>
     <%= f.submit %>
+  </p>
+  <p>
+    <%= link_to "Back", users_path %>
   </p>
 <% end %>
