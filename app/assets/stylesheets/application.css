@@ -1,1 +1,31 @@
-/* Application styles */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+/* ================================================== general stuff ================================================== */
+
+* {
+    font-family: 'Poppins', sans-serif;
+    /* margin: 20px; */
+}
+
+a {
+    color: blue;
+}
+
+/* ================================================== table ================================================== */
+
+table {
+    margin: 20px 0;
+    /*width: 100%;*/
+    border-collapse: collapse;
+}
+
+table th, table td {
+    padding: 0 10px;
+    text-align: left;
+}
+
+table th {
+    background-color: #e7e7e7;
+}
+
+/* ================================================== ... ================================================== */
