@@ -1148,3 +1148,1418 @@ Processing by UserSessionsController#new as HTML
   Rendering user_sessions/new.html.erb within layouts/application
   Rendered user_sessions/new.html.erb within layouts/application (Duration: 9.8ms | Allocations: 1079)
   Rendered layout layouts/application.html.erb (Duration: 11.9ms | Allocations: 1524)
+Completed 200 OK in 1099ms (Views: 18.0ms | ActiveRecord: 0.0ms | Allocations: 2173)
+
+
+Started GET "/" for ::1 at 2023-10-20 14:08:08 +0200
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 278)
+  Rendered layout layouts/application.html.erb (Duration: 57.5ms | Allocations: 8683)
+Completed 200 OK in 854ms (Views: 59.6ms | ActiveRecord: 0.0ms | Allocations: 9016)
+
+
+Started GET "/assets/application-8bc92ab2460ad4770a11d46225dda5390ca54778.css" for ::1 at 2023-10-20 14:08:09 +0200
+Started GET "/user_sessions/new" for ::1 at 2023-10-20 14:08:34 +0200
+Processing by UserSessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering user_sessions/new.html.erb within layouts/application
+  Rendered user_sessions/new.html.erb within layouts/application (Duration: 0.9ms | Allocations: 681)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | Allocations: 1106)
+Completed 200 OK in 814ms (Views: 4.3ms | ActiveRecord: 0.0ms | Allocations: 1452)
+
+
+Started GET "/user_sessions/new" for ::1 at 2023-10-20 14:09:38 +0200
+Processing by UserSessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering user_sessions/new.html.erb within layouts/application
+  Rendered user_sessions/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 672)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 1097)
+Completed 200 OK in 850ms (Views: 6.6ms | ActiveRecord: 0.0ms | Allocations: 1443)
+
+
+Started GET "/assets/turbo.min.js-5093396d0aa766ef4bc8b19992d78500e6b77274.map" for ::1 at 2023-10-20 14:09:45 +0200
+Started GET "/assets/stimulus.min.js-2395e199d23be7cb7a7b2de253fd2459262e20bc.map" for ::1 at 2023-10-20 14:09:45 +0200
+Started GET "/assets/es-module-shims.js-bd1f30ec7d215d110ee5965a376e562ef4394f96.map" for ::1 at 2023-10-20 14:09:45 +0200
+Started GET "/" for ::1 at 2023-10-20 14:10:25 +0200
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 280)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | Allocations: 706)
+Completed 200 OK in 817ms (Views: 4.4ms | ActiveRecord: 0.0ms | Allocations: 1036)
+
+
+Started GET "/pages/secret" for ::1 at 2023-10-20 14:11:26 +0200
+Processing by PagesController#secret as HTML
+  Rendering text template
+  Rendered text template (Duration: 0.0ms | Allocations: 3)
+Completed 401 Unauthorized in 962ms (Views: 24.3ms | ActiveRecord: 0.0ms | Allocations: 3743)
+
+
+Started GET "/pages/secret" for ::1 at 2023-10-20 14:11:27 +0200
+Processing by PagesController#secret as HTML
+  Rendering text template
+  Rendered text template (Duration: 0.0ms | Allocations: 1)
+Completed 401 Unauthorized in 1026ms (Views: 1.8ms | ActiveRecord: 0.0ms | Allocations: 566)
+
+
+Started GET "/user_sessions/new" for ::1 at 2023-10-20 14:11:31 +0200
+Processing by UserSessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering user_sessions/new.html.erb within layouts/application
+  Rendered user_sessions/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 767)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | Allocations: 1208)
+Completed 200 OK in 874ms (Views: 5.4ms | ActiveRecord: 0.0ms | Allocations: 1578)
+
+
+Started POST "/user_sessions" for ::1 at 2023-10-20 14:11:42 +0200
+Processing by UserSessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"admin", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mUser Load (33.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "admin"], ["LIMIT", 1]]
+  ↳ app/controllers/user_sessions_controller.rb:7:in `create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 1231ms (ActiveRecord: 59.1ms | Allocations: 1746)
+
+
+Started GET "/" for ::1 at 2023-10-20 14:11:43 +0200
+Processing by PagesController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered pages/index.html.erb within layouts/application (Duration: 5.2ms | Allocations: 1571)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 1997)
+Completed 200 OK in 1104ms (Views: 7.7ms | ActiveRecord: 1.1ms | Allocations: 2378)
+
+
+Started GET "/" for ::1 at 2023-10-20 14:12:31 +0200
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered pages/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 799)
+  Rendered layout layouts/application.html.erb (Duration: 71.0ms | Allocations: 9204)
+Completed 200 OK in 1030ms (Views: 71.8ms | ActiveRecord: 0.8ms | Allocations: 9535)
+
+
+Started GET "/assets/application-9b6a0bb713ceca15ce489ed22b2aaf8ab522a5d1.css" for ::1 at 2023-10-20 14:12:32 +0200
+Started GET "/" for ::1 at 2023-10-20 14:13:14 +0200
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered pages/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 835)
+  Rendered layout layouts/application.html.erb (Duration: 78.1ms | Allocations: 9221)
+Completed 200 OK in 1053ms (Views: 79.2ms | ActiveRecord: 0.9ms | Allocations: 9555)
+
+
+Started GET "/assets/application-17b9dfb6e32b5dbb93d09652f31acaed6f576e96.css" for ::1 at 2023-10-20 14:13:15 +0200
+Started GET "/" for ::1 at 2023-10-20 14:13:43 +0200
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered pages/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 829)
+  Rendered layout layouts/application.html.erb (Duration: 66.1ms | Allocations: 9215)
+Completed 200 OK in 1068ms (Views: 67.2ms | ActiveRecord: 0.6ms | Allocations: 9545)
+
+
+Started GET "/assets/application-b1fcaf7b29f8cc07f3164087df5be1a39bff4471.css" for ::1 at 2023-10-20 14:13:44 +0200
+Started GET "/" for ::1 at 2023-10-20 14:13:52 +0200
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered pages/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 843)
+  Rendered layout layouts/application.html.erb (Duration: 64.6ms | Allocations: 9229)
+Completed 200 OK in 915ms (Views: 65.7ms | ActiveRecord: 0.8ms | Allocations: 9563)
+
+
+Started GET "/assets/application-d717ec3ddb5068283300abc719fa8f1f0443efff.css" for ::1 at 2023-10-20 14:13:53 +0200
+Started DELETE "/user_sessions/5" for ::1 at 2023-10-20 14:13:56 +0200
+Processing by UserSessionsController#destroy as TURBO_STREAM
+  Parameters: {"id"=>"5"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1047ms (ActiveRecord: 0.0ms | Allocations: 483)
+
+
+Started GET "/" for ::1 at 2023-10-20 14:13:57 +0200
+Processing by PagesController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 286)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | Allocations: 712)
+Completed 200 OK in 998ms (Views: 4.2ms | ActiveRecord: 0.0ms | Allocations: 1047)
+
+
+Started GET "/user_sessions/new" for ::1 at 2023-10-20 14:14:01 +0200
+Processing by UserSessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering user_sessions/new.html.erb within layouts/application
+  Rendered user_sessions/new.html.erb within layouts/application (Duration: 1.0ms | Allocations: 684)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | Allocations: 1109)
+Completed 200 OK in 823ms (Views: 4.4ms | ActiveRecord: 0.0ms | Allocations: 1456)
+
+
+Started POST "/user_sessions" for ::1 at 2023-10-20 14:14:19 +0200
+Processing by UserSessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"admin", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "admin"], ["LIMIT", 1]]
+  ↳ app/controllers/user_sessions_controller.rb:7:in `create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 1159ms (ActiveRecord: 0.7ms | Allocations: 987)
+
+
+Started GET "/" for ::1 at 2023-10-20 14:14:20 +0200
+Processing by PagesController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered pages/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 832)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 1258)
+Completed 200 OK in 1003ms (Views: 6.0ms | ActiveRecord: 0.8ms | Allocations: 1596)
+
+
+Started GET "/pages/secret" for ::1 at 2023-10-20 14:14:24 +0200
+Processing by PagesController#secret as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering pages/secret.html.erb within layouts/application
+  Rendered pages/secret.html.erb within layouts/application (Duration: 8.1ms | Allocations: 117)
+  Rendered layout layouts/application.html.erb (Duration: 10.4ms | Allocations: 544)
+Completed 200 OK in 1017ms (Views: 12.3ms | ActiveRecord: 1.0ms | Allocations: 1667)
+
+
+Started GET "/" for ::1 at 2023-10-20 14:15:24 +0200
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered pages/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 832)
+  Rendered layout layouts/application.html.erb (Duration: 72.2ms | Allocations: 9218)
+Completed 200 OK in 1051ms (Views: 73.2ms | ActiveRecord: 0.7ms | Allocations: 9548)
+
+
+Started GET "/assets/application-6e0bdf9c361dcd2f1b537718707074a98e26c466.css" for ::1 at 2023-10-20 14:15:25 +0200
+Started GET "/users" for ::1 at 2023-10-20 14:15:48 +0200
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:13
+  Rendered users/index.html.erb within layouts/application (Duration: 11.8ms | Allocations: 912)
+  Rendered layout layouts/application.html.erb (Duration: 14.5ms | Allocations: 1533)
+Completed 200 OK in 891ms (Views: 15.3ms | ActiveRecord: 0.9ms | Allocations: 1934)
+
+
+Started GET "/users" for ::1 at 2023-10-20 14:17:05 +0200
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:13
+  Rendered users/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 671)
+  Rendered layout layouts/application.html.erb (Duration: 72.3ms | Allocations: 9256)
+Completed 200 OK in 915ms (Views: 73.2ms | ActiveRecord: 0.9ms | Allocations: 9600)
+
+
+Started GET "/assets/application-b17f84a6d6ab5325c34150d7014c6fc8515b1f9f.css" for ::1 at 2023-10-20 14:17:06 +0200
+Started GET "/users" for ::1 at 2023-10-20 14:18:00 +0200
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:13
+  Rendered users/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 671)
+  Rendered layout layouts/application.html.erb (Duration: 63.2ms | Allocations: 9264)
+Completed 200 OK in 1077ms (Views: 64.4ms | ActiveRecord: 0.6ms | Allocations: 9606)
+
+
+Started GET "/assets/application-595e8c055564955f70a940c3c395ddb3c9f90428.css" for ::1 at 2023-10-20 14:18:01 +0200
+Started GET "/" for ::1 at 2023-10-20 14:20:24 +0200
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered pages/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 826)
+  Rendered layout layouts/application.html.erb (Duration: 73.7ms | Allocations: 9213)
+Completed 200 OK in 1209ms (Views: 74.8ms | ActiveRecord: 0.8ms | Allocations: 9546)
+
+
+Started GET "/assets/application-6b502745f23f5458ed073a27b437a38364d677e0.css" for ::1 at 2023-10-20 14:20:25 +0200
+Started DELETE "/user_sessions/5" for ::1 at 2023-10-20 14:20:31 +0200
+Processing by UserSessionsController#destroy as TURBO_STREAM
+  Parameters: {"id"=>"5"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 997ms (ActiveRecord: 0.0ms | Allocations: 456)
+
+
+Started GET "/" for ::1 at 2023-10-20 14:20:32 +0200
+Processing by PagesController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 286)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | Allocations: 712)
+Completed 200 OK in 1026ms (Views: 4.2ms | ActiveRecord: 0.0ms | Allocations: 1047)
+
+
+Started GET "/users" for ::1 at 2023-10-20 14:27:38 +0200
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (32.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:13
+  Rendered users/index.html.erb within layouts/application (Duration: 36.2ms | Allocations: 951)
+  Rendered layout layouts/application.html.erb (Duration: 38.2ms | Allocations: 1566)
+Completed 200 OK in 882ms (Views: -16.0ms | ActiveRecord: 55.9ms | Allocations: 1907)
+
+
+Started GET "/users" for ::1 at 2023-10-20 14:29:01 +0200
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:13
+  Rendered users/index.html.erb within layouts/application (Duration: 56.4ms | Allocations: 4367)
+  Rendered layout layouts/application.html.erb (Duration: 198.4ms | Allocations: 15176)
+Completed 200 OK in 1293ms (Views: 153.9ms | ActiveRecord: 65.9ms | Allocations: 17296)
+
+
+Started GET "/assets/application-972e6148af8ff13c99700fad55d10742b5c6419d.css" for ::1 at 2023-10-20 14:29:03 +0200
+Started GET "/users" for ::1 at 2023-10-20 14:29:13 +0200
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:14
+  Rendered users/index.html.erb within layouts/application (Duration: 55.4ms | Allocations: 4307)
+  Rendered layout layouts/application.html.erb (Duration: 105.4ms | Allocations: 7109)
+Completed 200 OK in 1238ms (Views: 63.4ms | ActiveRecord: 65.0ms | Allocations: 9219)
+
+
+Started GET "/users" for ::1 at 2023-10-20 14:30:13 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:14
+  Rendered users/index.html.erb within layouts/application (Duration: 36.7ms | Allocations: 11618)
+  Rendered layout layouts/application.html.erb (Duration: 179.9ms | Allocations: 23821)
+Completed 200 OK in 1970ms (Views: 210.2ms | ActiveRecord: 4.8ms | Allocations: 34559)
+
+
+Started GET "/users/new" for ::1 at 2023-10-20 14:30:18 +0200
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 34.4ms | Allocations: 2565)
+  Rendered layout layouts/application.html.erb (Duration: 36.4ms | Allocations: 3024)
+Completed 200 OK in 1070ms (Views: 38.3ms | ActiveRecord: 0.0ms | Allocations: 3571)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (2.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[35m (8.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.7ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (1.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2023-10-20 12:31:27.612993', '2023-10-20 12:31:27.612997') RETURNING "key"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20231020083817)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar, "email" varchar, "password_digest" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20231020083817') RETURNING "version"[0m
+  [1m[36mTRANSACTION (4.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/users" for ::1 at 2023-10-20 14:32:05 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:14
+  Rendered users/index.html.erb within layouts/application (Duration: 14.1ms | Allocations: 1282)
+  Rendered layout layouts/application.html.erb (Duration: 184.6ms | Allocations: 13423)
+Completed 200 OK in 2145ms (Views: 229.3ms | ActiveRecord: 0.9ms | Allocations: 24158)
+
+
+Started GET "/users/new" for ::1 at 2023-10-20 14:32:11 +0200
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 38.3ms | Allocations: 2585)
+  Rendered layout layouts/application.html.erb (Duration: 40.5ms | Allocations: 3044)
+Completed 200 OK in 1065ms (Views: 42.4ms | ActiveRecord: 2.7ms | Allocations: 13810)
+
+
+Started GET "/users/new" for ::1 at 2023-10-20 14:32:25 +0200
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 934)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 1360)
+Completed 200 OK in 966ms (Views: 5.3ms | ActiveRecord: 0.0ms | Allocations: 1769)
+
+
+Started GET "/users" for ::1 at 2023-10-20 14:48:38 +0200
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (37.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:14
+  Rendered users/index.html.erb within layouts/application (Duration: 50.5ms | Allocations: 1330)
+  Rendered layout layouts/application.html.erb (Duration: 105.8ms | Allocations: 4117)
+Completed 200 OK in 1169ms (Views: 61.0ms | ActiveRecord: 65.2ms | Allocations: 6236)
+
+
+Started GET "/users" for ::1 at 2023-10-20 14:48:46 +0200
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:14
+  Rendered users/index.html.erb within layouts/application (Duration: 4.3ms | Allocations: 593)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 1229)
+Completed 200 OK in 820ms (Views: 7.4ms | ActiveRecord: 1.1ms | Allocations: 1601)
+
+
+Started GET "/users/new" for ::1 at 2023-10-20 14:48:50 +0200
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 42.6ms | Allocations: 1899)
+  Rendered layout layouts/application.html.erb (Duration: 45.2ms | Allocations: 2357)
+Completed 200 OK in 1072ms (Views: 47.4ms | ActiveRecord: 0.0ms | Allocations: 5184)
+
+
+Started GET "/users/new" for ::1 at 2023-10-20 14:49:18 +0200
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 1109)
+  Rendered layout layouts/application.html.erb (Duration: 72.1ms | Allocations: 9514)
+Completed 200 OK in 1045ms (Views: 73.9ms | ActiveRecord: 0.0ms | Allocations: 9912)
+
+
+Started GET "/assets/application-0e159230cc2945ed5d4fa94a7f19c45ddfa884a4.css" for ::1 at 2023-10-20 14:49:19 +0200
+Started POST "/users" for ::1 at 2023-10-20 14:49:43 +0200
+Processing by UsersController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"admin", "email"=>"admin@admin.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  [1m[36mUser Exists? (2.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "admin"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1868)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 2313)
+Completed 422 Unprocessable Entity in 978ms (Views: 5.7ms | ActiveRecord: 3.1ms | Allocations: 7842)
+
+
+Started POST "/users" for ::1 at 2023-10-20 14:50:06 +0200
+Processing by UsersController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"admin", "email"=>"admin@admin.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  [1m[36mUser Exists? (2.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "admin"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["username", "admin"], ["email", "admin@admin.com"], ["password_digest", "[FILTERED]"], ["created_at", "2023-10-20 12:50:08.115222"], ["updated_at", "2023-10-20 12:50:08.115222"]]
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (6.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:13:in `create'
+Redirected to http://localhost:3000/users
+Completed 302 Found in 1008ms (ActiveRecord: 9.9ms | Allocations: 4422)
+
+
+Started GET "/users" for ::1 at 2023-10-20 14:50:08 +0200
+Processing by UsersController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:14
+  Rendered users/index.html.erb within layouts/application (Duration: 5.3ms | Allocations: 673)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 1303)
+Completed 200 OK in 823ms (Views: 7.5ms | ActiveRecord: 2.4ms | Allocations: 1651)
+
+
+Started GET "/users" for ::1 at 2023-10-20 14:51:28 +0200
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:14
+  Rendered users/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 613)
+  Rendered layout layouts/application.html.erb (Duration: 74.7ms | Allocations: 9231)
+Completed 200 OK in 1048ms (Views: 76.0ms | ActiveRecord: 0.5ms | Allocations: 9576)
+
+
+Started GET "/assets/application-f613ba3efa6c2c939e5c13a1b9923fb89c15bd26.css" for ::1 at 2023-10-20 14:51:30 +0200
+Started GET "/users" for ::1 at 2023-10-20 14:51:38 +0200
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:14
+  Rendered users/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 613)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 1252)
+Completed 200 OK in 985ms (Views: 5.9ms | ActiveRecord: 0.5ms | Allocations: 1594)
+
+
+Started GET "/users" for ::1 at 2023-10-20 14:52:10 +0200
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:14
+  Rendered users/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 613)
+  Rendered layout layouts/application.html.erb (Duration: 70.6ms | Allocations: 9209)
+Completed 200 OK in 919ms (Views: 71.7ms | ActiveRecord: 0.6ms | Allocations: 9552)
+
+
+Started GET "/assets/application-2b94331ceb9f837532c09fc0c8456f24e13877b5.css" for ::1 at 2023-10-20 14:52:12 +0200
+Started GET "/users" for ::1 at 2023-10-20 14:52:16 +0200
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:14
+  Rendered users/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 613)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 1228)
+Completed 200 OK in 910ms (Views: 6.0ms | ActiveRecord: 0.5ms | Allocations: 1570)
+
+
+Started GET "/users" for ::1 at 2023-10-20 14:54:12 +0200
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:14
+  Rendered users/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 613)
+  Rendered layout layouts/application.html.erb (Duration: 60.9ms | Allocations: 9215)
+Completed 200 OK in 959ms (Views: 62.3ms | ActiveRecord: 0.4ms | Allocations: 9558)
+
+
+Started GET "/assets/application-ac2df170e2a41ca970b4aa64c93c2ca3ac4ac843.css" for ::1 at 2023-10-20 14:54:13 +0200
+Started GET "/users" for ::1 at 2023-10-20 14:54:20 +0200
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:14
+  Rendered users/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 613)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 1237)
+Completed 200 OK in 1006ms (Views: 7.1ms | ActiveRecord: 0.6ms | Allocations: 1579)
+
+
+Started GET "/users/new" for ::1 at 2023-10-20 14:56:25 +0200
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 1109)
+  Rendered layout layouts/application.html.erb (Duration: 64.3ms | Allocations: 9494)
+Completed 200 OK in 919ms (Views: 66.1ms | ActiveRecord: 0.0ms | Allocations: 9842)
+
+
+Started GET "/assets/application-b5014ea73f6a5fa136c120165ac5da54e4eccc7d.css" for ::1 at 2023-10-20 14:56:26 +0200
+Started GET "/users/new" for ::1 at 2023-10-20 14:56:26 +0200
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1109)
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | Allocations: 1534)
+Completed 200 OK in 1004ms (Views: 6.3ms | ActiveRecord: 0.0ms | Allocations: 1887)
+
+
+Started POST "/users" for ::1 at 2023-10-20 14:56:46 +0200
+Processing by UsersController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"levin", "email"=>"levin.schaller@bbzbl-it.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  [1m[36mUser Exists? (2.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "levin"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["username", "levin"], ["email", "levin.schaller@bbzbl-it.com"], ["password_digest", "[FILTERED]"], ["created_at", "2023-10-20 12:56:47.868474"], ["updated_at", "2023-10-20 12:56:47.868474"]]
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:13:in `create'
+Redirected to http://localhost:3000/users
+Completed 302 Found in 1183ms (ActiveRecord: 5.4ms | Allocations: 3343)
+
+
+Started GET "/users" for ::1 at 2023-10-20 14:56:47 +0200
+Processing by UsersController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:14
+  Rendered users/index.html.erb within layouts/application (Duration: 4.4ms | Allocations: 632)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 1253)
+Completed 200 OK in 1046ms (Views: 7.3ms | ActiveRecord: 1.8ms | Allocations: 1603)
+
+
+Started GET "/users/new" for ::1 at 2023-10-20 14:56:55 +0200
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1092)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 1517)
+Completed 200 OK in 1045ms (Views: 5.5ms | ActiveRecord: 0.0ms | Allocations: 1864)
+
+
+Started POST "/users" for ::1 at 2023-10-20 14:57:16 +0200
+Processing by UsersController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"leon", "email"=>"leon.hochwimmer@bbzbl-it.ch", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  [1m[36mUser Exists? (3.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "leon"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["username", "leon"], ["email", "leon.hochwimmer@bbzbl-it.ch"], ["password_digest", "[FILTERED]"], ["created_at", "2023-10-20 12:57:17.811592"], ["updated_at", "2023-10-20 12:57:17.811592"]]
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:13:in `create'
+Redirected to http://localhost:3000/users
+Completed 302 Found in 1206ms (ActiveRecord: 5.2ms | Allocations: 3282)
+
+
+Started GET "/users" for ::1 at 2023-10-20 14:57:17 +0200
+Processing by UsersController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:14
+  Rendered users/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 651)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 1263)
+Completed 200 OK in 1009ms (Views: 8.1ms | ActiveRecord: 1.3ms | Allocations: 1610)
+
+
+Started GET "/users" for ::1 at 2023-10-20 15:01:40 +0200
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:14
+  Rendered users/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 651)
+  Rendered layout layouts/application.html.erb (Duration: 79.5ms | Allocations: 9229)
+Completed 200 OK in 1208ms (Views: 81.3ms | ActiveRecord: 0.6ms | Allocations: 9571)
+
+
+Started GET "/assets/application-debe5527ea9c417230f4024dcece6fe15a408433.css" for ::1 at 2023-10-20 15:01:41 +0200
+Started GET "/users" for ::1 at 2023-10-20 15:02:23 +0200
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:14
+  Rendered users/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 651)
+  Rendered layout layouts/application.html.erb (Duration: 61.2ms | Allocations: 9226)
+Completed 200 OK in 870ms (Views: 62.4ms | ActiveRecord: 0.4ms | Allocations: 9571)
+
+
+Started GET "/assets/application-ecb7dfd52dec47b9176a179faf3aac9ca4897f73.css" for ::1 at 2023-10-20 15:02:24 +0200
+Started GET "/users" for ::1 at 2023-10-20 15:03:07 +0200
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:14
+  Rendered users/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 651)
+  Rendered layout layouts/application.html.erb (Duration: 68.6ms | Allocations: 9244)
+Completed 200 OK in 1078ms (Views: 69.8ms | ActiveRecord: 0.7ms | Allocations: 9589)
+
+
+Started GET "/assets/application-8bb6718a33829b32f1654ce2fce57899a9d6e393.css" for ::1 at 2023-10-20 15:03:08 +0200
+Started GET "/users" for ::1 at 2023-10-20 15:03:55 +0200
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:14
+  Rendered users/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 651)
+  Rendered layout layouts/application.html.erb (Duration: 77.6ms | Allocations: 9235)
+Completed 200 OK in 1098ms (Views: 78.8ms | ActiveRecord: 0.5ms | Allocations: 9580)
+
+
+Started GET "/assets/application-7da67067b4266422bae611bd88f4a4765c78c32e.css" for ::1 at 2023-10-20 15:03:57 +0200
+Started GET "/users" for ::1 at 2023-10-20 15:04:19 +0200
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:14
+  Rendered users/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 651)
+  Rendered layout layouts/application.html.erb (Duration: 75.0ms | Allocations: 9235)
+Completed 200 OK in 1094ms (Views: 76.5ms | ActiveRecord: 0.5ms | Allocations: 9580)
+
+
+Started GET "/assets/application-689ed533cacb6be0254e4f41308474e06eb8b72a.css" for ::1 at 2023-10-20 15:04:20 +0200
+Started GET "/users" for ::1 at 2023-10-20 15:04:52 +0200
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:14
+  Rendered users/index.html.erb within layouts/application (Duration: 4.3ms | Allocations: 651)
+  Rendered layout layouts/application.html.erb (Duration: 94.9ms | Allocations: 9217)
+Completed 200 OK in 1112ms (Views: 96.0ms | ActiveRecord: 0.8ms | Allocations: 9562)
+
+
+Started GET "/assets/application-4070d348fc60337c4f097e1eec340f6c347a5841.css" for ::1 at 2023-10-20 15:04:53 +0200
+Started GET "/users" for ::1 at 2023-10-20 15:05:03 +0200
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:14
+  Rendered users/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 651)
+  Rendered layout layouts/application.html.erb (Duration: 75.0ms | Allocations: 9235)
+Completed 200 OK in 1106ms (Views: 76.4ms | ActiveRecord: 0.5ms | Allocations: 9581)
+
+
+Started GET "/assets/application-d3311f16406d0a146e3fee6662185b633fc3419e.css" for ::1 at 2023-10-20 15:05:05 +0200
+Started GET "/users" for ::1 at 2023-10-20 15:05:34 +0200
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:14
+  Rendered users/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 651)
+  Rendered layout layouts/application.html.erb (Duration: 69.8ms | Allocations: 9238)
+Completed 200 OK in 1073ms (Views: 71.2ms | ActiveRecord: 0.5ms | Allocations: 9581)
+
+
+Started GET "/assets/application-5540fe00108d3dc5fe64ac721a332dd5283fdb34.css" for ::1 at 2023-10-20 15:05:36 +0200
+Started GET "/users" for ::1 at 2023-10-20 15:05:47 +0200
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:14
+  Rendered users/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 651)
+  Rendered layout layouts/application.html.erb (Duration: 69.0ms | Allocations: 9241)
+Completed 200 OK in 1024ms (Views: 70.1ms | ActiveRecord: 0.8ms | Allocations: 9586)
+
+
+Started GET "/assets/application-2d764e28b6216f9e0bf80e76d4c14adfc2de3f31.css" for ::1 at 2023-10-20 15:05:49 +0200
+Started GET "/users" for ::1 at 2023-10-20 15:06:27 +0200
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:14
+  Rendered users/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 651)
+  Rendered layout layouts/application.html.erb (Duration: 73.6ms | Allocations: 9244)
+Completed 200 OK in 1063ms (Views: 75.5ms | ActiveRecord: 0.6ms | Allocations: 9589)
+
+
+Started GET "/assets/application-ef88d21d21893174e59dca3242c540e1fd9defe5.css" for ::1 at 2023-10-20 15:06:29 +0200
+Started GET "/users" for ::1 at 2023-10-20 15:07:17 +0200
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:14
+  Rendered users/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 651)
+  Rendered layout layouts/application.html.erb (Duration: 81.7ms | Allocations: 9232)
+Completed 200 OK in 1088ms (Views: 82.9ms | ActiveRecord: 0.7ms | Allocations: 9574)
+
+
+Started GET "/assets/application-2f0de0550c0400b7ea05907b4593600c3892d8f7.css" for ::1 at 2023-10-20 15:07:18 +0200
+Started GET "/users" for ::1 at 2023-10-20 15:07:41 +0200
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:14
+  Rendered users/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 651)
+  Rendered layout layouts/application.html.erb (Duration: 79.9ms | Allocations: 9242)
+Completed 200 OK in 1069ms (Views: 81.0ms | ActiveRecord: 0.7ms | Allocations: 9584)
+
+
+Started GET "/assets/application-a5b4d1c078f69b1742e0dac38e341ae3fcf339d8.css" for ::1 at 2023-10-20 15:07:42 +0200
+Started GET "/" for ::1 at 2023-10-20 15:11:19 +0200
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 10.1ms | Allocations: 602)
+  Rendered layout layouts/application.html.erb (Duration: 78.4ms | Allocations: 9049)
+Completed 200 OK in 1115ms (Views: 85.8ms | ActiveRecord: 0.0ms | Allocations: 9670)
+
+
+Started GET "/assets/application-b5f150cf9bef2243eb6fa1478c33947f2ded1ac6.css" for ::1 at 2023-10-20 15:11:21 +0200
+Started GET "/users/new" for ::1 at 2023-10-20 15:11:25 +0200
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1173)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 1598)
+Completed 200 OK in 982ms (Views: 5.2ms | ActiveRecord: 0.0ms | Allocations: 1958)
+
+
+Started GET "/users" for ::1 at 2023-10-20 15:11:31 +0200
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:14
+  Rendered users/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 727)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 1357)
+Completed 200 OK in 999ms (Views: 5.9ms | ActiveRecord: 0.6ms | Allocations: 1701)
+
+
+Started GET "/users" for ::1 at 2023-10-20 15:22:32 +0200
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (29.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:15
+  Rendered users/index.html.erb within layouts/application (Duration: 49.0ms | Allocations: 5110)
+  Rendered layout layouts/application.html.erb (Duration: 50.8ms | Allocations: 5207)
+Completed 500 Internal Server Error in 1033ms (ActiveRecord: 50.7ms | Allocations: 7304)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 0, expected 1)):
+    19:         <td><%= user.email %></td>
+    20:         <td><%=
+    21:         link_to "Delete",
+    22:         user_path(u),
+    23:         method: :delete,
+    24:         data: { confirm: "Really delete this user?" }
+    25:       %></td>
+  
+app/views/users/index.html.erb:22
+app/views/users/index.html.erb:15
+Started GET "/users" for ::1 at 2023-10-20 15:24:04 +0200
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:15
+  Rendered users/index.html.erb within layouts/application (Duration: 57.1ms | Allocations: 8879)
+  Rendered layout layouts/application.html.erb (Duration: 58.9ms | Allocations: 8966)
+Completed 500 Internal Server Error in 1175ms (ActiveRecord: 61.8ms | Allocations: 11067)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `username' for #<ActionView::Base:0x00000000016148>
+
+        username,
+        ^^^^^^^^
+Did you mean?  user_path):
+    19:         <td><%= user.email %></td>
+    20:         <td><%=
+    21:         link_to "Delete",
+    22:         username,
+    23:         data: { turbo_confirm: "Really delete this user?", turbo_method: :delete }
+    24:       %></td>
+    25:       </tr>
+  
+app/views/users/index.html.erb:22
+app/views/users/index.html.erb:15
+Started GET "/users" for ::1 at 2023-10-20 15:24:17 +0200
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:15
+  Rendered users/index.html.erb within layouts/application (Duration: 54.0ms | Allocations: 4541)
+  Rendered layout layouts/application.html.erb (Duration: 120.1ms | Allocations: 7374)
+Completed 200 OK in 1238ms (Views: 78.3ms | ActiveRecord: 63.1ms | Allocations: 9490)
+
+
+Started DELETE "/users/3" for ::1 at 2023-10-20 15:24:24 +0200
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for UsersController):
+  
+actionpack (7.1.1) lib/abstract_controller/base.rb:155:in `process'
+actionview (7.1.1) lib/action_view/rendering.rb:40:in `process'
+actionpack (7.1.1) lib/action_controller/metal.rb:227:in `dispatch'
+actionpack (7.1.1) lib/action_controller/metal.rb:309:in `dispatch'
+actionpack (7.1.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.1.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.1.1) lib/action_dispatch/journey/router.rb:51:in `block in serve'
+actionpack (7.1.1) lib/action_dispatch/journey/router.rb:131:in `block in find_routes'
+actionpack (7.1.1) lib/action_dispatch/journey/router.rb:124:in `each'
+actionpack (7.1.1) lib/action_dispatch/journey/router.rb:124:in `find_routes'
+actionpack (7.1.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.1.1) lib/action_dispatch/routing/route_set.rb:882:in `call'
+rack (3.0.8) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.0.8) lib/rack/etag.rb:29:in `call'
+rack (3.0.8) lib/rack/conditional_get.rb:43:in `call'
+rack (3.0.8) lib/rack/head.rb:15:in `call'
+actionpack (7.1.1) lib/action_dispatch/http/permissions_policy.rb:36:in `call'
+actionpack (7.1.1) lib/action_dispatch/http/content_security_policy.rb:33:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (7.1.1) lib/active_record/migration.rb:653:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.1) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.1) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.1) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.1) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.1) lib/active_support/broadcast_logger.rb:232:in `method_missing'
+railties (7.1.1) lib/rails/rack/logger.rb:24:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.8) lib/rack/method_override.rb:28:in `call'
+rack (3.0.8) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.1) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.1) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.8) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.1) lib/rails/engine.rb:529:in `call'
+puma (6.4.0) lib/puma/configuration.rb:272:in `call'
+puma (6.4.0) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.0) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.0) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.0) lib/puma/server.rb:443:in `process_client'
+puma (6.4.0) lib/puma/server.rb:241:in `block in run'
+puma (6.4.0) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/users" for ::1 at 2023-10-20 15:24:25 +0200
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:15
+  Rendered users/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 778)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 1408)
+Completed 200 OK in 804ms (Views: 5.8ms | ActiveRecord: 0.6ms | Allocations: 1770)
+
+
+Started GET "/users" for ::1 at 2023-10-20 15:24:29 +0200
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:15
+  Rendered users/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 777)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 1392)
+Completed 200 OK in 967ms (Views: 6.5ms | ActiveRecord: 0.8ms | Allocations: 1737)
+
+
+Started GET "/users" for ::1 at 2023-10-20 15:25:37 +0200
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:15
+  Rendered users/index.html.erb within layouts/application (Duration: 52.6ms | Allocations: 4530)
+  Rendered layout layouts/application.html.erb (Duration: 94.7ms | Allocations: 7328)
+Completed 200 OK in 983ms (Views: 51.0ms | ActiveRecord: 58.3ms | Allocations: 9447)
+
+
+Started DELETE "/users/3" for ::1 at 2023-10-20 15:25:42 +0200
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for UsersController):
+  
+actionpack (7.1.1) lib/abstract_controller/base.rb:155:in `process'
+actionview (7.1.1) lib/action_view/rendering.rb:40:in `process'
+actionpack (7.1.1) lib/action_controller/metal.rb:227:in `dispatch'
+actionpack (7.1.1) lib/action_controller/metal.rb:309:in `dispatch'
+actionpack (7.1.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.1.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.1.1) lib/action_dispatch/journey/router.rb:51:in `block in serve'
+actionpack (7.1.1) lib/action_dispatch/journey/router.rb:131:in `block in find_routes'
+actionpack (7.1.1) lib/action_dispatch/journey/router.rb:124:in `each'
+actionpack (7.1.1) lib/action_dispatch/journey/router.rb:124:in `find_routes'
+actionpack (7.1.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.1.1) lib/action_dispatch/routing/route_set.rb:882:in `call'
+rack (3.0.8) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.0.8) lib/rack/etag.rb:29:in `call'
+rack (3.0.8) lib/rack/conditional_get.rb:43:in `call'
+rack (3.0.8) lib/rack/head.rb:15:in `call'
+actionpack (7.1.1) lib/action_dispatch/http/permissions_policy.rb:36:in `call'
+actionpack (7.1.1) lib/action_dispatch/http/content_security_policy.rb:33:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (7.1.1) lib/active_record/migration.rb:653:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.1) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.1) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.1) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.1) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.1) lib/active_support/broadcast_logger.rb:232:in `method_missing'
+railties (7.1.1) lib/rails/rack/logger.rb:24:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.8) lib/rack/method_override.rb:28:in `call'
+rack (3.0.8) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.1) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.1) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.8) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.1) lib/rails/engine.rb:529:in `call'
+puma (6.4.0) lib/puma/configuration.rb:272:in `call'
+puma (6.4.0) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.0) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.0) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.0) lib/puma/server.rb:443:in `process_client'
+puma (6.4.0) lib/puma/server.rb:241:in `block in run'
+puma (6.4.0) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/users" for ::1 at 2023-10-20 15:25:42 +0200
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:15
+  Rendered users/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 778)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 1408)
+Completed 200 OK in 938ms (Views: 6.3ms | ActiveRecord: 0.9ms | Allocations: 1774)
+
+
+Started GET "/users" for ::1 at 2023-10-20 15:25:47 +0200
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:15
+  Rendered users/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 777)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 1404)
+Completed 200 OK in 959ms (Views: 6.5ms | ActiveRecord: 0.6ms | Allocations: 1746)
+
+
+Started GET "/users" for ::1 at 2023-10-20 15:28:42 +0200
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:15
+  Rendered users/index.html.erb within layouts/application (Duration: 47.7ms | Allocations: 4533)
+  Rendered layout layouts/application.html.erb (Duration: 93.7ms | Allocations: 7328)
+Completed 200 OK in 1075ms (Views: 54.1ms | ActiveRecord: 57.5ms | Allocations: 9444)
+
+
+Started DELETE "/users/3" for ::1 at 2023-10-20 15:28:51 +0200
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for UsersController):
+  
+actionpack (7.1.1) lib/abstract_controller/base.rb:155:in `process'
+actionview (7.1.1) lib/action_view/rendering.rb:40:in `process'
+actionpack (7.1.1) lib/action_controller/metal.rb:227:in `dispatch'
+actionpack (7.1.1) lib/action_controller/metal.rb:309:in `dispatch'
+actionpack (7.1.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.1.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.1.1) lib/action_dispatch/journey/router.rb:51:in `block in serve'
+actionpack (7.1.1) lib/action_dispatch/journey/router.rb:131:in `block in find_routes'
+actionpack (7.1.1) lib/action_dispatch/journey/router.rb:124:in `each'
+actionpack (7.1.1) lib/action_dispatch/journey/router.rb:124:in `find_routes'
+actionpack (7.1.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.1.1) lib/action_dispatch/routing/route_set.rb:882:in `call'
+rack (3.0.8) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.0.8) lib/rack/etag.rb:29:in `call'
+rack (3.0.8) lib/rack/conditional_get.rb:43:in `call'
+rack (3.0.8) lib/rack/head.rb:15:in `call'
+actionpack (7.1.1) lib/action_dispatch/http/permissions_policy.rb:36:in `call'
+actionpack (7.1.1) lib/action_dispatch/http/content_security_policy.rb:33:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (7.1.1) lib/active_record/migration.rb:653:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.1) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.1) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.1) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.1) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.1) lib/active_support/broadcast_logger.rb:232:in `method_missing'
+railties (7.1.1) lib/rails/rack/logger.rb:24:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.8) lib/rack/method_override.rb:28:in `call'
+rack (3.0.8) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.1) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.1) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.8) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.1) lib/rails/engine.rb:529:in `call'
+puma (6.4.0) lib/puma/configuration.rb:272:in `call'
+puma (6.4.0) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.0) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.0) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.0) lib/puma/server.rb:443:in `process_client'
+puma (6.4.0) lib/puma/server.rb:241:in `block in run'
+puma (6.4.0) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/users" for ::1 at 2023-10-20 15:28:52 +0200
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:15
+  Rendered users/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 778)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 1432)
+Completed 200 OK in 1003ms (Views: 6.5ms | ActiveRecord: 0.8ms | Allocations: 1795)
+
+
+Started GET "/users" for ::1 at 2023-10-20 15:33:46 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (2.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:15
+  Rendered users/index.html.erb within layouts/application (Duration: 42.2ms | Allocations: 11837)
+  Rendered layout layouts/application.html.erb (Duration: 224.6ms | Allocations: 24018)
+Completed 200 OK in 2464ms (Views: 265.7ms | ActiveRecord: 6.4ms | Allocations: 34754)
+
+
+Started DELETE "/users/3" for ::1 at 2023-10-20 15:33:59 +0200
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for UsersController):
+  
+actionpack (7.1.1) lib/abstract_controller/base.rb:155:in `process'
+actionview (7.1.1) lib/action_view/rendering.rb:40:in `process'
+actionpack (7.1.1) lib/action_controller/metal.rb:227:in `dispatch'
+actionpack (7.1.1) lib/action_controller/metal.rb:309:in `dispatch'
+actionpack (7.1.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.1.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.1.1) lib/action_dispatch/journey/router.rb:51:in `block in serve'
+actionpack (7.1.1) lib/action_dispatch/journey/router.rb:131:in `block in find_routes'
+actionpack (7.1.1) lib/action_dispatch/journey/router.rb:124:in `each'
+actionpack (7.1.1) lib/action_dispatch/journey/router.rb:124:in `find_routes'
+actionpack (7.1.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.1.1) lib/action_dispatch/routing/route_set.rb:882:in `call'
+rack (3.0.8) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.0.8) lib/rack/etag.rb:29:in `call'
+rack (3.0.8) lib/rack/conditional_get.rb:43:in `call'
+rack (3.0.8) lib/rack/head.rb:15:in `call'
+actionpack (7.1.1) lib/action_dispatch/http/permissions_policy.rb:36:in `call'
+actionpack (7.1.1) lib/action_dispatch/http/content_security_policy.rb:33:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (7.1.1) lib/active_record/migration.rb:653:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.1) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.1) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.1) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.1) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.1) lib/active_support/broadcast_logger.rb:232:in `method_missing'
+railties (7.1.1) lib/rails/rack/logger.rb:24:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.8) lib/rack/method_override.rb:28:in `call'
+rack (3.0.8) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.1) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.1) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.8) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.1) lib/rails/engine.rb:529:in `call'
+puma (6.4.0) lib/puma/configuration.rb:272:in `call'
+puma (6.4.0) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.0) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.0) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.0) lib/puma/server.rb:443:in `process_client'
+puma (6.4.0) lib/puma/server.rb:241:in `block in run'
+puma (6.4.0) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/users" for ::1 at 2023-10-20 15:33:59 +0200
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:15
+  Rendered users/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 908)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 1635)
+Completed 200 OK in 825ms (Views: 7.4ms | ActiveRecord: 0.8ms | Allocations: 2021)
+
+
+Started GET "/users/new" for ::1 at 2023-10-20 15:34:29 +0200
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 61.5ms | Allocations: 6474)
+  Rendered layout layouts/application.html.erb (Duration: 63.3ms | Allocations: 6932)
+Completed 200 OK in 1014ms (Views: 65.2ms | ActiveRecord: 0.0ms | Allocations: 7403)
+
+
+Started GET "/" for ::1 at 2023-10-20 15:34:34 +0200
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 8.7ms | Allocations: 579)
+  Rendered layout layouts/application.html.erb (Duration: 10.6ms | Allocations: 1047)
+Completed 200 OK in 984ms (Views: 16.7ms | ActiveRecord: 0.0ms | Allocations: 1677)
+
+
+Started GET "/user_sessions/new" for ::1 at 2023-10-20 15:34:37 +0200
+Processing by UserSessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering user_sessions/new.html.erb within layouts/application
+  Rendered user_sessions/new.html.erb within layouts/application (Duration: 10.7ms | Allocations: 1058)
+  Rendered layout layouts/application.html.erb (Duration: 12.5ms | Allocations: 1503)
+Completed 200 OK in 846ms (Views: 17.5ms | ActiveRecord: 0.0ms | Allocations: 2160)
+
+
+Started GET "/users/new" for ::1 at 2023-10-20 15:34:47 +0200
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 1111)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 1536)
+Completed 200 OK in 1026ms (Views: 5.3ms | ActiveRecord: 0.0ms | Allocations: 1884)
+
+
+Started GET "/users" for ::1 at 2023-10-20 15:35:11 +0200
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:15
+  Rendered users/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 866)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 1490)
+Completed 200 OK in 925ms (Views: 6.2ms | ActiveRecord: 0.8ms | Allocations: 1837)
+
+
+Started GET "/users" for ::1 at 2023-10-20 15:35:21 +0200
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:15
+  Rendered users/index.html.erb within layouts/application (Duration: 48.0ms | Allocations: 4550)
+  Rendered layout layouts/application.html.erb (Duration: 90.5ms | Allocations: 7344)
+Completed 200 OK in 1058ms (Views: 49.9ms | ActiveRecord: 56.1ms | Allocations: 9456)
+
+
+Started GET "/users" for ::1 at 2023-10-20 15:35:54 +0200
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:15
+  Rendered users/index.html.erb within layouts/application (Duration: 71.2ms | Allocations: 4498)
+  Rendered layout layouts/application.html.erb (Duration: 120.8ms | Allocations: 7292)
+Completed 200 OK in 1201ms (Views: 74.3ms | ActiveRecord: 68.1ms | Allocations: 9408)
+
+
+Started GET "/users" for ::1 at 2023-10-20 15:36:38 +0200
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:14
+  Rendered users/index.html.erb within layouts/application (Duration: 49.8ms | Allocations: 4478)
+  Rendered layout layouts/application.html.erb (Duration: 99.3ms | Allocations: 7291)
+Completed 200 OK in 1017ms (Views: 62.5ms | ActiveRecord: 56.3ms | Allocations: 9411)
+
+
+Started GET "/users" for ::1 at 2023-10-20 15:36:58 +0200
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:15
+  Rendered users/index.html.erb within layouts/application (Duration: 55.5ms | Allocations: 4471)
+  Rendered layout layouts/application.html.erb (Duration: 100.8ms | Allocations: 7279)
+Completed 200 OK in 1200ms (Views: 59.5ms | ActiveRecord: 63.4ms | Allocations: 9393)
+
+
+Started GET "/users" for ::1 at 2023-10-20 15:37:16 +0200
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (Duration: 52.4ms | Allocations: 4474)
+  Rendered layout layouts/application.html.erb (Duration: 102.2ms | Allocations: 7280)
+Completed 200 OK in 1142ms (Views: 63.2ms | ActiveRecord: 61.3ms | Allocations: 9397)
+
+
+Started GET "/users" for ::1 at 2023-10-20 15:38:12 +0200
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (Duration: 60.4ms | Allocations: 5243)
+  Rendered layout layouts/application.html.erb (Duration: 115.2ms | Allocations: 8048)
+Completed 200 OK in 1173ms (Views: 69.5ms | ActiveRecord: 68.4ms | Allocations: 10169)
+
+
+Started DELETE "/users/3" for ::1 at 2023-10-20 15:39:12 +0200
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for UsersController):
+  
+actionpack (7.1.1) lib/abstract_controller/base.rb:155:in `process'
+actionview (7.1.1) lib/action_view/rendering.rb:40:in `process'
+actionpack (7.1.1) lib/action_controller/metal.rb:227:in `dispatch'
+actionpack (7.1.1) lib/action_controller/metal.rb:309:in `dispatch'
+actionpack (7.1.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.1.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.1.1) lib/action_dispatch/journey/router.rb:51:in `block in serve'
+actionpack (7.1.1) lib/action_dispatch/journey/router.rb:131:in `block in find_routes'
+actionpack (7.1.1) lib/action_dispatch/journey/router.rb:124:in `each'
+actionpack (7.1.1) lib/action_dispatch/journey/router.rb:124:in `find_routes'
+actionpack (7.1.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.1.1) lib/action_dispatch/routing/route_set.rb:882:in `call'
+rack (3.0.8) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.0.8) lib/rack/etag.rb:29:in `call'
+rack (3.0.8) lib/rack/conditional_get.rb:43:in `call'
+rack (3.0.8) lib/rack/head.rb:15:in `call'
+actionpack (7.1.1) lib/action_dispatch/http/permissions_policy.rb:36:in `call'
+actionpack (7.1.1) lib/action_dispatch/http/content_security_policy.rb:33:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (7.1.1) lib/active_record/migration.rb:653:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.1) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.1) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.1) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.1) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.1) lib/active_support/broadcast_logger.rb:232:in `method_missing'
+railties (7.1.1) lib/rails/rack/logger.rb:24:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.8) lib/rack/method_override.rb:28:in `call'
+rack (3.0.8) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.1) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.1) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.8) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.1) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.1) lib/rails/engine.rb:529:in `call'
+puma (6.4.0) lib/puma/configuration.rb:272:in `call'
+puma (6.4.0) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.0) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.0) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.0) lib/puma/server.rb:443:in `process_client'
+puma (6.4.0) lib/puma/server.rb:241:in `block in run'
+puma (6.4.0) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/users" for ::1 at 2023-10-20 15:39:12 +0200
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 966)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 1605)
+Completed 200 OK in 1005ms (Views: 7.8ms | ActiveRecord: 0.9ms | Allocations: 1969)
+
+
+Started GET "/users" for ::1 at 2023-10-20 15:40:30 +0200
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (Duration: 55.7ms | Allocations: 5183)
+  Rendered layout layouts/application.html.erb (Duration: 111.8ms | Allocations: 7968)
+Completed 200 OK in 1244ms (Views: 70.0ms | ActiveRecord: 63.5ms | Allocations: 10081)
+
+
+Started DELETE "/users/3" for ::1 at 2023-10-20 15:40:35 +0200
+Processing by UsersController#destroy as TURBO_STREAM
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:23:in `destroy'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:24:in `destroy'
+  [1m[36mUser Destroy (3.0ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/users_controller.rb:24:in `destroy'
+  [1m[36mTRANSACTION (8.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:24:in `destroy'
+Redirected to http://localhost:3000/users
+Completed 302 Found in 1044ms (ActiveRecord: 12.5ms | Allocations: 4869)
+
+
+Started GET "/users" for ::1 at 2023-10-20 15:40:37 +0200
+Processing by UsersController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (Duration: 5.6ms | Allocations: 890)
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | Allocations: 1615)
+Completed 200 OK in 1014ms (Views: 8.3ms | ActiveRecord: 1.9ms | Allocations: 2057)
+
+
