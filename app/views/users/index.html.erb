@@ -9,6 +9,7 @@
       <th>username</th>
       <th>email</th>
       <th>action</th>
+      <th> </th>
     </tr>
   </thead>
   <tbody>
@@ -17,6 +18,9 @@
         <td><%= user.id %></td>
         <td><%= user.username %></td>
         <td><%= user.email %></td>
+        <td>
+          <%= link_to "Edit", edit_user_path(user) %>
+        </td>
         <td>
           <%= link_to "Delete", user, data: { turbo_confirm: "Really delete this user?", turbo_method: :delete} %>
         </td>

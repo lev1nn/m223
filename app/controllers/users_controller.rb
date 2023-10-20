@@ -19,6 +19,22 @@ class UsersController < ApplicationController
     end
   end
 
+  def edit
+    @user = User.find(params[:id])
+  end
+  
+  def update
+    @user = User.find(params[:id])
+  
+    if @user.update(user_params)
+      flash[:notice] = "User updated successfully"
+      redirect_to users_path
+    else
+      flash[:alert] = "User not updated"
+      render :edit, status: :unprocessable_entity
+    end
+  end  
+
   def destroy
     @user = User.find(params[:id])
     @user.destroy
