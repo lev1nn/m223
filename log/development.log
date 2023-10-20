@@ -917,3 +917,234 @@ Processing by PagesController#secret as HTML
 Completed 200 OK in 997ms (Views: 14.3ms | ActiveRecord: 1.1ms | Allocations: 1635)
 
 
+Started GET "/pages/secret" for ::1 at 2023-10-20 13:27:50 +0200
+Processing by PagesController#secret as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering pages/secret.html.erb within layouts/application
+  Rendered pages/secret.html.erb within layouts/application (Duration: 0.0ms | Allocations: 6)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | Allocations: 431)
+Completed 200 OK in 1053ms (Views: 3.4ms | ActiveRecord: 0.9ms | Allocations: 1492)
+
+
+Started GET "/users" for ::1 at 2023-10-20 13:29:31 +0200
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:13
+  Rendered users/index.html.erb within layouts/application (Duration: 12.0ms | Allocations: 1075)
+  Rendered layout layouts/application.html.erb (Duration: 15.5ms | Allocations: 1809)
+Completed 200 OK in 949ms (Views: 21.5ms | ActiveRecord: 0.9ms | Allocations: 2449)
+
+
+Started GET "/" for ::1 at 2023-10-20 13:34:00 +0200
+Processing by PagesController#index as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ (rdbg)//mnt/c/Users/admin/Desktop/Projekt/m223/app/controllers/pages_controller.rb:1:in `index'
+Completed 500 Internal Server Error in 180295ms (ActiveRecord: 58.0ms | Allocations: 120825)
+
+
+  
+SystemExit (exit):
+  
+(rdbg)//mnt/c/Users/admin/Desktop/Projekt/m223/app/controllers/pages_controller.rb:1:in `exit'
+(rdbg)//mnt/c/Users/admin/Desktop/Projekt/m223/app/controllers/pages_controller.rb:1:in `index'
+app/controllers/pages_controller.rb:14:in `index'
+Started GET "/" for ::1 at 2023-10-20 13:38:23 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered pages/index.html.erb within layouts/application (Duration: 241.5ms | Allocations: 20911)
+  Rendered layout layouts/application.html.erb (Duration: 393.7ms | Allocations: 31737)
+Completed 200 OK in 2623ms (Views: 445.6ms | ActiveRecord: 5.7ms | Allocations: 36431)
+
+
+Started GET "/pages/secret" for ::1 at 2023-10-20 13:38:36 +0200
+Processing by PagesController#secret as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering pages/secret.html.erb within layouts/application
+  Rendered pages/secret.html.erb within layouts/application (Duration: 8.2ms | Allocations: 108)
+  Rendered layout layouts/application.html.erb (Duration: 10.3ms | Allocations: 577)
+Completed 200 OK in 1033ms (Views: 12.2ms | ActiveRecord: 0.8ms | Allocations: 1909)
+
+
+Started GET "/" for 127.0.0.1 at 2023-10-20 13:45:42 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (2.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered pages/index.html.erb within layouts/application (Duration: 220.2ms | Allocations: 27087)
+  Rendered layout layouts/application.html.erb (Duration: 221.8ms | Allocations: 27218)
+Completed 500 Internal Server Error in 2343ms (ActiveRecord: 4.7ms | Allocations: 31861)
+
+
+  
+ActionView::Template::Error (undefined method `name' for #<User id: 5, username: "admin", email: nil, password_digest: [FILTERED], created_at: "2023-10-20 09:36:41.007445000 +0000", updated_at: "2023-10-20 09:36:41.007445000 +0000">):
+    1: <% if current_user %>
+    2:   <h1>Welcome, <%= current_user.name %></h1>
+    3:   <%= link_to 'Log out', user_session_path(current_user), data: { turbo_method: :delete } %><br>
+    4: <% else %>
+    5:   <h1>This is the index page</h1>
+  
+app/views/pages/index.html.erb:2
+Started GET "/" for ::1 at 2023-10-20 13:46:14 +0200
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered pages/index.html.erb within layouts/application (Duration: 100.7ms | Allocations: 6388)
+  Rendered layout layouts/application.html.erb (Duration: 238.8ms | Allocations: 17171)
+Completed 200 OK in 1341ms (Views: 192.9ms | ActiveRecord: 65.5ms | Allocations: 18355)
+
+
+Started DELETE "/user_sessions/5" for ::1 at 2023-10-20 13:46:19 +0200
+Processing by UserSessionsController#destroy as TURBO_STREAM
+  Parameters: {"id"=>"5"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 958ms (ActiveRecord: 0.0ms | Allocations: 742)
+
+
+Started GET "/" for ::1 at 2023-10-20 13:46:20 +0200
+Processing by PagesController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 275)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 723)
+Completed 200 OK in 1050ms (Views: 5.5ms | ActiveRecord: 0.0ms | Allocations: 1154)
+
+
+Started GET "/user_sessions/new" for ::1 at 2023-10-20 13:46:23 +0200
+Processing by UserSessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering user_sessions/new.html.erb within layouts/application
+  Rendered user_sessions/new.html.erb within layouts/application (Duration: 37.3ms | Allocations: 1986)
+  Rendered layout layouts/application.html.erb (Duration: 40.0ms | Allocations: 2449)
+Completed 200 OK in 1074ms (Views: 45.6ms | ActiveRecord: 0.0ms | Allocations: 3060)
+
+
+Started POST "/user_sessions" for ::1 at 2023-10-20 13:46:30 +0200
+Processing by UserSessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"admin", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "admin"], ["LIMIT", 1]]
+  ↳ app/controllers/user_sessions_controller.rb:7:in `create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 1195ms (ActiveRecord: 1.1ms | Allocations: 1346)
+
+
+Started GET "/" for ::1 at 2023-10-20 13:46:31 +0200
+Processing by PagesController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered pages/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 833)
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | Allocations: 1260)
+Completed 200 OK in 829ms (Views: 5.9ms | ActiveRecord: 0.6ms | Allocations: 1628)
+
+
+Started GET "/create" for ::1 at 2023-10-20 13:46:44 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/create"):
+  
+Started GET "/users" for ::1 at 2023-10-20 13:46:52 +0200
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:13
+  Rendered users/index.html.erb within layouts/application (Duration: 11.0ms | Allocations: 1066)
+  Rendered layout layouts/application.html.erb (Duration: 13.4ms | Allocations: 1806)
+Completed 200 OK in 972ms (Views: 18.9ms | ActiveRecord: 0.7ms | Allocations: 2441)
+
+
+Started GET "/users/new" for ::1 at 2023-10-20 13:47:00 +0200
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 10.2ms | Allocations: 1466)
+  Rendered layout layouts/application.html.erb (Duration: 12.7ms | Allocations: 1891)
+Completed 200 OK in 1047ms (Views: 14.6ms | ActiveRecord: 0.0ms | Allocations: 2306)
+
+
+Started DELETE "/user_sessions/5" for ::1 at 2023-10-20 13:47:08 +0200
+Processing by UserSessionsController#destroy as TURBO_STREAM
+  Parameters: {"id"=>"5"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1019ms (ActiveRecord: 0.0ms | Allocations: 474)
+
+
+Started GET "/" for ::1 at 2023-10-20 13:47:09 +0200
+Processing by PagesController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 253)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | Allocations: 679)
+Completed 200 OK in 1026ms (Views: 3.4ms | ActiveRecord: 0.0ms | Allocations: 1014)
+
+
+Started GET "/" for ::1 at 2023-10-20 13:48:29 +0200
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 16.0ms | Allocations: 5052)
+  Rendered layout layouts/application.html.erb (Duration: 17.8ms | Allocations: 5141)
+Completed 500 Internal Server Error in 1071ms (ActiveRecord: 0.0ms | Allocations: 6267)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_users_path' for #<ActionView::Base:0x00000000011ff8>
+
+  '.freeze; @output_buffer.append=( link_to 'Register', new_users_path ); @output_buffer.safe_append='<br>
+                                                        ^^^^^^^^^^^^^^
+Did you mean?  new_user_path):
+    4: <% else %>
+    5:   <h1>This is the index page</h1>
+    6:   <%= link_to 'Login', new_user_session_path %><br>
+    7:   <%= link_to 'Register', new_users_path %><br>
+    8: <% end %>
+    9: <%= link_to 'Secret page', '/pages/secret' %>
+  
+app/views/pages/index.html.erb:7
+Started GET "/" for ::1 at 2023-10-20 13:49:40 +0200
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 10.9ms | Allocations: 626)
+  Rendered layout layouts/application.html.erb (Duration: 67.6ms | Allocations: 3163)
+Completed 200 OK in 1170ms (Views: 91.3ms | ActiveRecord: 0.0ms | Allocations: 4318)
+
+
+Started GET "/users/new" for ::1 at 2023-10-20 13:50:01 +0200
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 9.2ms | Allocations: 1564)
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | Allocations: 2009)
+Completed 200 OK in 896ms (Views: 16.8ms | ActiveRecord: 55.0ms | Allocations: 6834)
+
+
+Started GET "/users/new" for ::1 at 2023-10-20 13:50:17 +0200
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 939)
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 1364)
+Completed 200 OK in 814ms (Views: 6.7ms | ActiveRecord: 0.0ms | Allocations: 1716)
+
+
+Started GET "/user_sessions/new" for ::1 at 2023-10-20 13:51:25 +0200
+Processing by UserSessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering user_sessions/new.html.erb within layouts/application
+  Rendered user_sessions/new.html.erb within layouts/application (Duration: 9.8ms | Allocations: 1079)
+  Rendered layout layouts/application.html.erb (Duration: 11.9ms | Allocations: 1524)
