@@ -22,13 +22,17 @@ class UsersController < ApplicationController
   def edit
     @user = User.find(params[:id])
   end
+
+  def edit_profile
+    @user = current_user
+  end
   
   def update
     @user = User.find(params[:id])
   
     if @user.update(user_params)
       flash[:notice] = "User updated successfully"
-      redirect_to users_path
+      redirect_to root_path
     else
       flash[:alert] = "User not updated"
       render :edit, status: :unprocessable_entity
