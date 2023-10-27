@@ -1,4 +1,11 @@
 class ProductsController < ApplicationController
+    before_action :require_admin, only: [:index, :new, :create, :destroy]
+    def require_admin
+        unless current_user&.admin?
+          redirect_to root_path, alert: "403 Forbidden"
+        end
+    end
+    
     def index 
         @products = Product.all
         @categories = Category.all
