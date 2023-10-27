@@ -7389,3 +7389,73 @@ Processing by UsersController#index as HTML
 Completed 200 OK in 1154ms (Views: 107.6ms | ActiveRecord: 16.3ms | Allocations: 11786)
 
 
+Started GET "/users" for ::1 at 2023-10-27 11:12:36 +0200
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (9.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (Duration: 12.5ms | Allocations: 2028)
+  Rendered layout layouts/application.html.erb (Duration: 52.0ms | Allocations: 4562)
+Completed 200 OK in 978ms (Views: 66.3ms | ActiveRecord: 14.9ms | Allocations: 11712)
+
+
+Started GET "/" for ::1 at 2023-10-27 11:12:39 +0200
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered pages/index.html.erb within layouts/application (Duration: 13.0ms | Allocations: 1528)
+  Rendered layout layouts/application.html.erb (Duration: 15.0ms | Allocations: 1995)
+Completed 200 OK in 823ms (Views: 25.5ms | ActiveRecord: 0.5ms | Allocations: 2616)
+
+
+Started GET "/users/edit_profile.1" for ::1 at 2023-10-27 11:12:41 +0200
+Processing by UsersController#edit_profile as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit_profile.html.erb within layouts/application
+  Rendered users/edit_profile.html.erb within layouts/application (Duration: 10.9ms | Allocations: 1437)
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | Allocations: 1862)
+Completed 200 OK in 825ms (Views: 15.2ms | ActiveRecord: 0.4ms | Allocations: 3078)
+
+
+Started GET "/" for ::1 at 2023-10-27 11:12:44 +0200
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered pages/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 960)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 1386)
+Completed 200 OK in 1019ms (Views: 7.4ms | ActiveRecord: 0.6ms | Allocations: 1734)
+
+
+Started GET "/users" for ::1 at 2023-10-27 11:12:46 +0200
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1478)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 1904)
+Completed 200 OK in 973ms (Views: 7.5ms | ActiveRecord: 1.1ms | Allocations: 2968)
+
+
+Started GET "/" for ::1 at 2023-10-27 11:12:49 +0200
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered pages/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 942)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | Allocations: 1368)
+Completed 200 OK in 888ms (Views: 5.7ms | ActiveRecord: 0.5ms | Allocations: 1700)
+
+
