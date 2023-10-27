@@ -17,8 +17,11 @@
     </tbody>
   </table>
   <%= link_to "Edit Profile", edit_user_profile_path(current_user) %><br>
+  <% if current_user.admin? %>
+    <%= link_to "Manage Users", users_path %><br>
+  <% end %>
   <%= link_to 'Log out', user_session_path(current_user), data: { turbo_method: :delete } %><br>
-  <%= link_to 'Secret page', '/pages/secret' %>
+  <!-- <%= link_to 'Secret page', '/pages/secret' %> -->
 <% else %>
   <h1>This is the index page</h1>
   <%= link_to 'Login', new_user_session_path %><br>
