@@ -11,6 +11,10 @@ Rails.application.routes.draw do
   get 'users/edit'
   get 'users/edit_profile', to: 'users#edit_profile', as: 'edit_user_profile'
   patch 'users/update_profile', to: 'users#update_profile', as: 'update_user_profile'
+  get 'products/index'
+  get 'products/new'
   resources :user_sessions, only: [:new, :create, :destroy]
   resources :users, only: [:index, :new, :create, :edit, :edit_profile, :update, :destroy]
+  resources :products
+  resources :categories
 end
