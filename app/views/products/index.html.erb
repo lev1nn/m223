@@ -3,13 +3,13 @@
   <thead>
     <tr>
       <th>id</th>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Price</th>
-      <th>Category</th>
-      <th>Created at</th>
-      <th>Updated at</th>
-      <th>Action</th>
+      <th>name</th>
+      <th>description</th>
+      <th>price</th>
+      <th>category</th>
+      <th>created at</th>
+      <th>updated at</th>
+      <th>action</th>
     </tr>
   </thead>
   <tbody>
@@ -32,5 +32,26 @@
     <% end %>
   </tbody>
 </table>
+
+<h1>Category Counts</h1>
+<table>
+  <thead>
+    <tr>
+      <th>id</th>
+      <th>name</th>
+      <th>product count</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @categories.each do |category| %>
+      <tr>
+        <td><%= category.id %></td>
+        <td><%= category.name %></td>
+        <td><%= category.product_count %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
 <%= link_to 'New Product', new_product_path %><br>
 <%= link_to 'Back', root_path %>
