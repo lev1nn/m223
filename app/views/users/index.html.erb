@@ -1,7 +1,4 @@
 <h1>All Users</h1>
-
-<%= link_to 'New User', new_user_path %>
-
 <table>
   <thead>
     <tr>
@@ -9,6 +6,8 @@
       <th>username</th>
       <th>email</th>
       <th>roles</th>
+      <th>created at</th>
+      <th>updated at</th>
       <th>action</th>
       <th> </th>
     </tr>
@@ -20,6 +19,8 @@
         <td><%= user.username %></td>
         <td><%= user.email %></td>
         <td><%= user.role %></td>
+        <td><%= user.created_at.strftime("%d.%m.%Y") %></td>
+        <td><%= user.updated_at.strftime("%d.%m.%Y") %></td>
         <td>
           <%= link_to "Edit", edit_user_path(user) %>
         </td>
@@ -30,3 +31,5 @@
     <% end %>
   </tbody>
 </table>
+<%= link_to 'New User', new_user_path %><br>
+<%= link_to "Back", root_path %>

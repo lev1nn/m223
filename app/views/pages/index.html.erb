@@ -6,6 +6,7 @@
         <th>username</th>
         <th>email</th>
         <th>created at</th>
+        <th>updated at</th>
       </tr>
     </thead>
     <tbody>
@@ -13,6 +14,7 @@
         <td><%= current_user.username %></td>
         <td><%= current_user.email %></td>
         <td><%= current_user.created_at.strftime("%d.%m.%Y") %></td>
+        <td><%= current_user.updated_at.strftime("%d.%m.%Y") %></td>
       </tr>
     </tbody>
   </table>
