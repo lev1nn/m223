@@ -1,13 +1,13 @@
 <h1>Create User</h1>
 <%= form_with model: @user do |f| %>
   <% if @user.errors.any? %>
-    <div>
-      <ul>
-        <% @user.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-    </div>
+  <div class="user-creation-errors" >
+    <ul>
+      <% @user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
   <% end %>
   <div>
     <%= f.label :username %><br>

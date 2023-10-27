@@ -6610,3 +6610,263 @@ Processing by PagesController#index as HTML
 Completed 200 OK in 1202ms (Views: 140.7ms | ActiveRecord: 18.5ms | Allocations: 10945)
 
 
+Started GET "/" for ::1 at 2023-10-27 09:33:14 +0200
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered pages/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 990)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 1417)
+Completed 200 OK in 1032ms (Views: 6.7ms | ActiveRecord: 0.6ms | Allocations: 1783)
+
+
+Started GET "/" for ::1 at 2023-10-27 09:43:37 +0200
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mUser Load (10.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered pages/index.html.erb within layouts/application (Duration: 72.3ms | Allocations: 6708)
+  Rendered layout layouts/application.html.erb (Duration: 206.8ms | Allocations: 17285)
+Completed 200 OK in 1261ms (Views: 208.2ms | ActiveRecord: 15.8ms | Allocations: 18440)
+
+
+Started GET "/assets/application-36029f8df89351216cc100bdfd868c67b3e5ddf9.css" for ::1 at 2023-10-27 09:43:39 +0200
+Started GET "/" for ::1 at 2023-10-27 09:43:47 +0200
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered pages/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 978)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 1405)
+Completed 200 OK in 988ms (Views: 7.0ms | ActiveRecord: 0.5ms | Allocations: 1774)
+
+
+Started DELETE "/user_sessions/1" for ::1 at 2023-10-27 09:43:49 +0200
+Processing by UserSessionsController#destroy as TURBO_STREAM
+  Parameters: {"id"=>"1"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1075ms (ActiveRecord: 0.0ms | Allocations: 641)
+
+
+Started GET "/" for ::1 at 2023-10-27 09:43:50 +0200
+Processing by PagesController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 289)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | Allocations: 737)
+Completed 200 OK in 1051ms (Views: 3.9ms | ActiveRecord: 0.0ms | Allocations: 1160)
+
+
+Started GET "/user_sessions/new" for ::1 at 2023-10-27 09:44:42 +0200
+Processing by UserSessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering user_sessions/new.html.erb within layouts/application
+  Rendered user_sessions/new.html.erb within layouts/application (Duration: 8.3ms | Allocations: 1165)
+  Rendered layout layouts/application.html.erb (Duration: 158.6ms | Allocations: 11690)
+Completed 200 OK in 1314ms (Views: 177.4ms | ActiveRecord: 17.1ms | Allocations: 17750)
+
+
+Started GET "/assets/application-0e778042c66f5f4d4d3ef4dd1312dc585831ff74.css" for ::1 at 2023-10-27 09:44:44 +0200
+Started GET "/user_sessions/new" for ::1 at 2023-10-27 09:44:44 +0200
+Processing by UserSessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering user_sessions/new.html.erb within layouts/application
+  Rendered user_sessions/new.html.erb within layouts/application (Duration: 0.9ms | Allocations: 660)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | Allocations: 1085)
+Completed 200 OK in 1088ms (Views: 4.3ms | ActiveRecord: 0.0ms | Allocations: 1489)
+
+
+Started POST "/user_sessions" for ::1 at 2023-10-27 09:44:48 +0200
+Processing by UserSessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"adsfdfas", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "adsfdfas"], ["LIMIT", 1]]
+  ↳ app/controllers/user_sessions_controller.rb:7:in `create'
+Redirected to http://localhost:3000/user_sessions/new
+Completed 302 Found in 856ms (ActiveRecord: 0.7ms | Allocations: 1398)
+
+
+Started GET "/user_sessions/new" for ::1 at 2023-10-27 09:44:49 +0200
+Processing by UserSessionsController#new as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering user_sessions/new.html.erb within layouts/application
+  Rendered user_sessions/new.html.erb within layouts/application (Duration: 0.9ms | Allocations: 690)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | Allocations: 1115)
+Completed 200 OK in 1026ms (Views: 4.4ms | ActiveRecord: 0.0ms | Allocations: 1514)
+
+
+Started GET "/users/new" for ::1 at 2023-10-27 09:44:53 +0200
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 10.4ms | Allocations: 1731)
+  Rendered layout layouts/application.html.erb (Duration: 12.8ms | Allocations: 2174)
+Completed 200 OK in 1098ms (Views: 20.1ms | ActiveRecord: 0.0ms | Allocations: 2906)
+
+
+Started GET "/users/new" for ::1 at 2023-10-27 09:44:54 +0200
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 1112)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | Allocations: 1537)
+Completed 200 OK in 1048ms (Views: 4.9ms | ActiveRecord: 0.0ms | Allocations: 1889)
+
+
+Started POST "/users" for ::1 at 2023-10-27 09:45:08 +0200
+Processing by UsersController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"dadfa", "email"=>"dfasdfas@dasf.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Exists? (3.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "dadfa"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1776)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 2201)
+Completed 422 Unprocessable Entity in 1224ms (Views: 6.1ms | ActiveRecord: 3.4ms | Allocations: 5833)
+
+
+Started POST "/users" for ::1 at 2023-10-27 09:45:14 +0200
+Processing by UsersController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"dadfa", "email"=>"dfasdfas@dasf.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Exists? (3.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "dadfa"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 2501)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 2926)
+Completed 422 Unprocessable Entity in 1199ms (Views: 7.4ms | ActiveRecord: 3.3ms | Allocations: 6104)
+
+
+Started POST "/users" for ::1 at 2023-10-27 09:45:21 +0200
+Processing by UsersController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"dadfa", "email"=>"dfasdfas@dasf.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Exists? (2.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "dadfa"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 2445)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 2870)
+Completed 422 Unprocessable Entity in 1048ms (Views: 5.8ms | ActiveRecord: 3.2ms | Allocations: 6031)
+
+
+Started POST "/users" for ::1 at 2023-10-27 09:45:25 +0200
+Processing by UsersController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"admin", "email"=>"dfasdfas@dasf.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Exists? (2.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "admin"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 3246)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 3671)
+Completed 422 Unprocessable Entity in 1035ms (Views: 7.1ms | ActiveRecord: 3.1ms | Allocations: 6764)
+
+
+Started GET "/users/new" for ::1 at 2023-10-27 09:45:36 +0200
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 1124)
+  Rendered layout layouts/application.html.erb (Duration: 71.4ms | Allocations: 9528)
+Completed 200 OK in 1066ms (Views: 73.2ms | ActiveRecord: 0.0ms | Allocations: 9881)
+
+
+Started GET "/assets/application-2d455a54571cda55b2556e7e2405faec0290bdf1.css" for ::1 at 2023-10-27 09:45:38 +0200
+Started POST "/users" for ::1 at 2023-10-27 09:45:51 +0200
+Processing by UsersController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"admin", "email"=>"asdf@df.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Exists? (2.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "admin"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 3190)
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | Allocations: 3615)
+Completed 422 Unprocessable Entity in 1152ms (Views: 7.5ms | ActiveRecord: 3.2ms | Allocations: 6779)
+
+
+Started GET "/users/new" for ::1 at 2023-10-27 09:46:26 +0200
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 1109)
+  Rendered layout layouts/application.html.erb (Duration: 74.3ms | Allocations: 9494)
+Completed 200 OK in 1104ms (Views: 76.3ms | ActiveRecord: 0.0ms | Allocations: 9849)
+
+
+Started GET "/assets/application-8bc9c2d7d1401d52736919f77e82aa204888a1f2.css" for ::1 at 2023-10-27 09:46:27 +0200
+Started POST "/users" for ::1 at 2023-10-27 09:46:38 +0200
+Processing by UsersController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"admin", "email"=>"asdf@df.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Exists? (2.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "admin"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 3190)
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | Allocations: 3615)
+Completed 422 Unprocessable Entity in 1050ms (Views: 7.0ms | ActiveRecord: 3.2ms | Allocations: 6765)
+
+
+Started GET "/user_sessions/new" for ::1 at 2023-10-27 09:51:21 +0200
+Processing by UserSessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering user_sessions/new.html.erb within layouts/application
+  Rendered user_sessions/new.html.erb within layouts/application (Duration: 1.0ms | Allocations: 690)
+  Rendered layout layouts/application.html.erb (Duration: 77.7ms | Allocations: 9075)
+Completed 200 OK in 1048ms (Views: 79.7ms | ActiveRecord: 0.0ms | Allocations: 9428)
+
+
+Started GET "/assets/application-2385902211fdfea789e2ab7290aecff904d877fb.css" for ::1 at 2023-10-27 09:51:22 +0200
+Started GET "/user_sessions/new" for ::1 at 2023-10-27 09:51:22 +0200
+Processing by UserSessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering user_sessions/new.html.erb within layouts/application
+  Rendered user_sessions/new.html.erb within layouts/application (Duration: 0.9ms | Allocations: 672)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | Allocations: 1097)
+Completed 200 OK in 846ms (Views: 5.2ms | ActiveRecord: 0.0ms | Allocations: 1451)
+
+
+Started POST "/user_sessions" for ::1 at 2023-10-27 09:51:33 +0200
+Processing by UserSessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"admin", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "admin"], ["LIMIT", 1]]
+  ↳ app/controllers/user_sessions_controller.rb:7:in `create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 1183ms (ActiveRecord: 0.7ms | Allocations: 1027)
+
+
+Started GET "/" for ::1 at 2023-10-27 09:51:34 +0200
+Processing by PagesController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered pages/index.html.erb within layouts/application (Duration: 13.3ms | Allocations: 2251)
+  Rendered layout layouts/application.html.erb (Duration: 15.5ms | Allocations: 2718)
+Completed 200 OK in 1070ms (Views: 21.0ms | ActiveRecord: 0.7ms | Allocations: 3345)
+
+
