@@ -1359,3 +1359,167 @@ Redirected to http://www.example.com/
 Completed 302 Found in 175ms (ActiveRecord: 0.0ms | Allocations: 406)
   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "user1"], ["LIMIT", 1]]
   [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (2.5ms)[0m  [1m[31mDELETE FROM "categories";
+DELETE FROM "products";
+DELETE FROM "users";
+INSERT INTO "categories" ("id", "name", "product_count", "created_at", "updated_at") VALUES (980190962, 'MyString', 1, '2023-10-27 14:17:12.494612', '2023-10-27 14:17:12.494612');
+INSERT INTO "categories" ("id", "name", "product_count", "created_at", "updated_at") VALUES (298486374, 'MyString', 1, '2023-10-27 14:17:12.494612', '2023-10-27 14:17:12.494612');
+INSERT INTO "products" ("id", "name", "description", "price", "category_id", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', 9.99, 1, '2023-10-27 14:17:12.499154', '2023-10-27 14:17:12.499154');
+INSERT INTO "products" ("id", "name", "description", "price", "category_id", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', 9.99, 1, '2023-10-27 14:17:12.499154', '2023-10-27 14:17:12.499154');
+INSERT INTO "users" ("id", "username", "email", "password_digest", "created_at", "updated_at") VALUES (980190962, 'user1', 'user1@example.com', '$2a$12$9iYymrK1WOI/bI8UbhH26eu5/JRgC.xuHMyN9D0iFroEzEitByNUC', '2023-10-27 14:17:12.503088', '2023-10-27 14:17:12.503088');
+INSERT INTO "users" ("id", "username", "email", "password_digest", "created_at", "updated_at") VALUES (298486374, 'user2', 'user2@example.com', '$2a$12$xBWzMLU88nEsxll5c6spWuzzQGE7dlEdgfAGpo3hw8bmfB0QPCTFO', '2023-10-27 14:17:12.503088', '2023-10-27 14:17:12.503088')[0m
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_key_check[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------
+UserSessionsControllerTest: test_should_destroy_session
+-------------------------------------------------------
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started POST "/user_sessions" for 127.0.0.1 at 2023-10-27 16:17:12 +0200
+Processing by UserSessionsController#create as HTML
+  Parameters: {"user"=>{"username"=>"user1", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "user1"], ["LIMIT", 1]]
+Redirected to http://www.example.com/
+Completed 302 Found in 195ms (ActiveRecord: 0.1ms | Allocations: 1915)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "user1"], ["LIMIT", 1]]
+Started DELETE "/user_sessions/980190962" for 127.0.0.1 at 2023-10-27 16:17:13 +0200
+Processing by UserSessionsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+Redirected to http://www.example.com/
+Completed 302 Found in 39ms (ActiveRecord: 0.0ms | Allocations: 1360)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------
+UserSessionsControllerTest: test_should_create_session
+------------------------------------------------------
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started POST "/user_sessions" for 127.0.0.1 at 2023-10-27 16:17:13 +0200
+Processing by UserSessionsController#create as HTML
+  Parameters: {"user"=>{"username"=>"user1", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "user1"], ["LIMIT", 1]]
+Redirected to http://www.example.com/
+Completed 302 Found in 175ms (ActiveRecord: 0.1ms | Allocations: 406)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "user1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------
+UserTest: test_password_is_required
+-----------------------------------
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "user1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------
+UserTest: test_password_must_be_at_least_12_characters_long
+-----------------------------------------------------------
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "user1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------
+UserTest: test_password_is_hashed_on_create
+-------------------------------------------
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "user1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------
+UserTest: test_password_is_at_least_12_characters_long
+------------------------------------------------------
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "user1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (2.4ms)[0m  [1m[31mDELETE FROM "categories";
+DELETE FROM "products";
+DELETE FROM "users";
+INSERT INTO "categories" ("id", "name", "product_count", "created_at", "updated_at") VALUES (980190962, 'MyString', 1, '2023-10-27 14:30:47.494092', '2023-10-27 14:30:47.494092');
+INSERT INTO "categories" ("id", "name", "product_count", "created_at", "updated_at") VALUES (298486374, 'MyString', 1, '2023-10-27 14:30:47.494092', '2023-10-27 14:30:47.494092');
+INSERT INTO "products" ("id", "name", "description", "price", "category_id", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', 9.99, 1, '2023-10-27 14:30:47.497540', '2023-10-27 14:30:47.497540');
+INSERT INTO "products" ("id", "name", "description", "price", "category_id", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', 9.99, 1, '2023-10-27 14:30:47.497540', '2023-10-27 14:30:47.497540');
+INSERT INTO "users" ("id", "username", "email", "password_digest", "created_at", "updated_at") VALUES (980190962, 'user1', 'user1@example.com', '$2a$12$gz/2Pr4zCIPxGuVDg7DOaODHK2jFkOVOx.Vz78AckTtM0w93ylZye', '2023-10-27 14:30:47.500369', '2023-10-27 14:30:47.500369');
+INSERT INTO "users" ("id", "username", "email", "password_digest", "created_at", "updated_at") VALUES (298486374, 'user2', 'user2@example.com', '$2a$12$S4qK/qOZrgjNjaYZWsnZi.qI5ZJdkJfaBySSHRbaC5ZVry4FZpAUq', '2023-10-27 14:30:47.500369', '2023-10-27 14:30:47.500369')[0m
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_key_check[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------
+UserTest: test_password_is_at_least_12_characters_long
+------------------------------------------------------
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "user1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------
+UserTest: test_password_must_be_at_least_12_characters_long
+-----------------------------------------------------------
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "user1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------
+UserTest: test_password_is_required
+-----------------------------------
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "user1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------
+UserTest: test_password_is_hashed_on_create
+-------------------------------------------
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "user1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------
+UserSessionsControllerTest: test_should_create_session
+------------------------------------------------------
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started POST "/user_sessions" for 127.0.0.1 at 2023-10-27 16:30:47 +0200
+Processing by UserSessionsController#create as HTML
+  Parameters: {"user"=>{"username"=>"user1", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "user1"], ["LIMIT", 1]]
+Redirected to http://www.example.com/
+Completed 302 Found in 197ms (ActiveRecord: 0.1ms | Allocations: 1898)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "user1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------
+UserSessionsControllerTest: test_should_destroy_session
+-------------------------------------------------------
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started POST "/user_sessions" for 127.0.0.1 at 2023-10-27 16:30:48 +0200
+Processing by UserSessionsController#create as HTML
+  Parameters: {"user"=>{"username"=>"user1", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "user1"], ["LIMIT", 1]]
+Redirected to http://www.example.com/
+Completed 302 Found in 176ms (ActiveRecord: 0.1ms | Allocations: 401)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "user1"], ["LIMIT", 1]]
+Started DELETE "/user_sessions/980190962" for 127.0.0.1 at 2023-10-27 16:30:48 +0200
+Processing by UserSessionsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+Redirected to http://www.example.com/
+Completed 302 Found in 40ms (ActiveRecord: 0.0ms | Allocations: 1330)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mrollback transaction[0m
