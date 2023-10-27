@@ -18,7 +18,7 @@
       </tr>
     </tbody>
   </table>
-  <%= link_to "Edit Profile", edit_user_profile_path(current_user) %><br>
+  <%= link_to 'Edit Profile', edit_user_profile_path(current_user) %><br>
   <% if current_user.admin? %>
     <%= link_to "Manage Users", users_path %><br>
   <% end %>
