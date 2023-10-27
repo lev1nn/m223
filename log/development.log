@@ -8276,3 +8276,6 @@ Processing by ProductsController#index as TURBO_STREAM
   ↳ app/views/products/index.html.erb:16
   Rendered products/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 729)
   Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 1362)
+Completed 200 OK in 1075ms (Views: 6.6ms | ActiveRecord: 1.4ms | Allocations: 1757)
+
+
